@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Person from './Person'
+import Soccer from './Soccer'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Person/>,
+  <div>
+    <Soccer country="Spain" club="Real Madrid" player="Isco"/>
+    <Soccer country="Brazil" club="PSG" player="Neymar Jr"/>
+    <Soccer country="Egypt" club="Liverpool" player="Mohammed Salah"/>
+  </div>, 
   document.querySelector('#root')
 );
 
