@@ -22,4 +22,4 @@ const Soccer = ({ country, club, player }) => {
     )
 }
 
-export default Soccer
+export default

@@ -18,4 +18,4 @@ const Person = () => {
     )
 }
 
-export default Person;
+export default 
