@@ -1,14 +1,14 @@
 import TodoDetail from './TodoDetail'
 
-const Todos = ({ todos }) => {
+const Todos = ({title, todos, deleteTodo, completeTodo }) => {
     return (
         <div>
             <h1 className="title has-text-primary">
-                All todos
+                { title }
             </h1>
 
             {todos.map(todo => (
-                <TodoDetail key={todo.id} todo={todo} />
+                <TodoDetail key={todo.id} completeTodo={completeTodo} todo={todo} deleteTodo={deleteTodo} />
             )) }
         </div>
     )

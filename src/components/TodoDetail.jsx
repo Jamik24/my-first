@@ -1,4 +1,4 @@
-const TodoDetail = ({ todo }) => {
+const TodoDetail = ({ todo, deleteTodo, completeTodo }) => {
     return (
         <div className="columns">
             <div className="column">
@@ -6,7 +6,10 @@ const TodoDetail = ({ todo }) => {
             </div>
             <div className="column is-narrow">
                 <div className="buttons">
-                    <div className="button is-danger">Delete</div>
+                    { (!todo.completed) ? (
+                        <button onClick={() => completeTodo(todo.id)} className="button is-success">Done</button>
+                    ) : ('') }
+                    <button onClick={() => deleteTodo(todo.id)} className="button is-danger">Delete</button>
                 </div>
             </div>
         </div>
